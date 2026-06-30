@@ -88,4 +88,4 @@ The application successfully performs patient registration, viewing, updating, a
 
 ## Author
 **Aparna Kanamarlapudi**
-**B. Tech Electronics and COmmunication Engineering**
+**B. Tech Electronics and Communication Engineering**
