@@ -1,46 +1,53 @@
 # Hospital Patient Management System
 
-## Overview
-The Hospital Patient Management System is a web-based application developed using Java Servlets, JDBC, MySQL, HTML, and CSS. It allows users to manage patient records efficiently through Create, Read, Update, and Delete (CRUD) operations.
+## Project Overview
+The Hospital Patient Management System is a web-based application developed using Java Servlets, HTML, JDBC, MySQL, and Apache Tomcat. It helps manage patient records by allowing users to register, view, edit, and delete patient information.
 
 ## Features
-- Register new patients
-- View all patient records
-- Update patient information
+- Add new patient records
+- View all registered patients
+- Edit patient details
 - Delete patient records
-- MySQL database integration using JDBC
-- User-friendly web interface
-- Apache Tomcat deployment
+- Store data in MySQL database
+- Simple and user-friendly interface
 
 ## Technologies Used
 - Java
 - Java Servlets
 - JDBC
-- MySQL
 - HTML
-- CSS
+- MySQL
 - Apache Tomcat
 - Eclipse IDE
 
-## Database Details
-
-### Database Name
-HOSPITALDB
-
-### Table Name
-PATIENTS
-
-### Columns
+## Database Structure
+### Patients Table
 | Column Name | Data Type |
-|------------|------------|
+|------------|-----------|
 | id | INT (Primary Key, Auto Increment) |
 | patient_name | VARCHAR(100) |
 | disease | VARCHAR(100) |
 | doctor_name | VARCHAR(100) |
 | mobile | VARCHAR(15) |
 
-## Project Structure
+## Project Modules
+### 1. Patient Registration
+Allows users to enter:
+- Patient Name
+- Disease
+- Doctor Name
+- Mobile Number
 
+### 2. View Patients
+Displays all patient records stored in the database.
+
+### 3. Edit Patient
+Updates existing patient details.
+
+### 4. Delete Patient
+Removes patient records from the database.
+
+## Project Structure
 HospitalPatientManagementSystem
 │
 ├── src/main/java/com/hospital
@@ -57,35 +64,55 @@ HospitalPatientManagementSystem
 │   └── ViewPatients.html
 │
 └── MySQL Database
+    └── HOSPITALDB
 
-## CRUD Operations
+## Screenshots
+### Patient Registration Page
+![Patient Registration](Screenshot%20(257).png)
 
-### Create
-Register a new patient and store details in the MySQL database.
+### Registration Success Page
+![Registration Success](Screenshot%20(258).png)
 
-### Read
-Display all patient records in a tabular format.
+### View Patients Page
+![View Patients](Screenshot%20(256).png)
 
-### Update
-Modify existing patient information.
+### Database Records in MySQL
+![Database Records](Screenshot%20(259).png)
 
-### Delete
-Remove patient records from the database.
+### Edit and Delete Operations
+![Edit Delete](Screenshot%20(261).png)
 
 ## How to Run
-1. Install Java JDK.
-2. Install Apache Tomcat.
-3. Install MySQL Server and MySQL Workbench.
-4. Create the database `HOSPITALDB`.
-5. Create the `PATIENTS` table.
-6. Configure MySQL credentials in `DBConnect.java`.
-7. Add MySQL Connector/JAR file to the project.
-8. Deploy the project on Apache Tomcat.
-9. Run the application in a web browser.
 
-## Output
-The application successfully performs patient registration, viewing, updating, and deletion operations using MySQL database connectivity.
+1. Install MySQL and Apache Tomcat.
+2. Create the database:
+
+CREATE DATABASE HOSPITALDB;
+USE HOSPITALDB;
+CREATE TABLE PATIENTS (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    patient_name VARCHAR(100),
+    disease VARCHAR(100),
+    doctor_name VARCHAR(100),
+    mobile VARCHAR(15)
+);
+
+3. Configure database connection in `DBConnect.java`.
+4. Import the project into Eclipse.
+5. Run the project on Apache Tomcat Server.
+6. Open:
+
+http://localhost:8080/HospitalPatientManagementSystem/PatientRegistration.html
+
+## Sample Output
+- Register Patient Successfully
+- View Patient Records
+- Edit Existing Records
+- Delete Patient Records
 
 ## Author
-**Aparna Kanamarlapudi**
-**B. Tech Electronics and Communication Engineering**
+**Aparna Kanamarlapudi**  
+B.Tech Electronics and Communication Engineering
+
+## GitHub Repository
+Hospital Patient Management System developed using Java Servlets, JDBC, MySQL, and Apache Tomcat for performing CRUD operations on patient records.
